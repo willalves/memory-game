@@ -1,0 +1,37 @@
+.card {
+  position: relative;
+  cursor: pointer;
+  
+  img {
+    width: 100%;
+    display: block;
+    border: 2px solid #8899A6;
+    border-radius: 6px;
+    &:hover {
+      box-shadow: 0 0 10px 5px #22303C;
+    }
+  }
+
+  .front {
+    transform: rotateY(90deg);
+    transition: all ease-in .2s;
+    position: absolute;
+  }
+  .flipped {
+    .front {
+      transform: rotateY(0deg);
+      transition-delay: .2s;
+    }
+  }
+
+  .back {
+    transition: all ease-in .2s;
+    transition-delay: .2s;
+  }
+  .flipped {
+    .back {
+      transform: rotateY(90deg);
+      transition-delay: 0;
+    }
+  }
+}
